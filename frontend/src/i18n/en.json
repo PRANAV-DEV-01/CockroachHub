@@ -1,0 +1,1111 @@
+{
+  "app": {
+    "name": "CJP Helpline",
+    "nameFull": "Cockroach Janta Party — Helpline",
+    "tagline": "Emergency Resource Hub for Student Protesters",
+    "siteName": "CockroachHub"
+  },
+  "nav": {
+    "home": "Home",
+    "emergency": "Emergency",
+    "liveFeed": "Live Feed",
+    "factCheck": "Fact Check",
+    "submit": "Submit Report",
+    "firstAid": "First Aid",
+    "sos": "SOS 🚨",
+    "safeZones": "Safe Spots",
+    "prep": "Prep",
+    "rights": "Rights 🔒",
+    "bail": "Bail ⚖️",
+    "checklist": "Packing List",
+    "mentalHealth": "Mental Health",
+    "aid": "Food/Shelter",
+    "resources": "Trusted Sources",
+    "manifesto": "Manifesto",
+    "about": "About",
+    "lock": "Lock App",
+    "exit": "Exit",
+    "privacy": "Privacy Guide",
+    "evidence": "Evidence",
+    "metro": "Metro",
+    "map": "Map",
+    "group": "Group",
+    "prepare": "Prepare",
+    "bus": "Bus"
+  },
+  "home": {
+    "trending": "Trending",
+    "viewAll": "View All",
+    "liveUpdates": "Live Updates",
+    "tagline": "Works when the internet goes down.",
+    "heroDesc": "Every guide, every emergency number, every legal right — cached on your phone. Internet shutdown? No problem.",
+    "chipOffline": "Works Offline",
+    "chipZeroData": "Zero Data Collection",
+    "chipAnonymous": "Anonymous Reports",
+    "saveToHome": "Save this page to your home screen.",
+    "shareWithFriends": "Share with friends before internet goes down. Every page works offline.",
+    "dataLastUpdated": "Data last updated:",
+    "today": "today",
+    "sources": "Sources: Govt of India, BNSS 2023, PHR, CJP network",
+    "cjp": "CJP",
+    "heroTitle": "Cockroach Janta Party —",
+    "heroHighlight": "Helpline",
+    "emergencyPrefix": "Emergency? Call",
+    "ambulance": "(Ambulance) or",
+    "police": "(Police). For legal aid, visit",
+    "emergencyLink": "Emergency Directory",
+    "categories": {
+      "emergency": {
+        "title": "Emergency Directory",
+        "tag": "Most Viewed",
+        "desc": "One-tap emergency contacts & legal aid"
+      },
+      "liveFeed": {
+        "title": "Live Field Feed",
+        "tag": "Trending",
+        "desc": "Real-time field updates & safety alerts"
+      },
+      "rights": {
+        "title": "Know Your Rights",
+        "tag": "Popular",
+        "desc": "Legal protections under Indian law"
+      },
+      "factCheck": {
+        "title": "Fact Check",
+        "tag": "Verified",
+        "desc": "Verified info & bust the rumor"
+      },
+      "submit": {
+        "title": "Submit Report",
+        "tag": "New",
+        "desc": "Send anonymous field report to admins"
+      }
+    },
+    "trendingAlerts": {
+      "tearGas": "Tear Gas Reported — Central Secretariat",
+      "legalAid": "Legal Aid Available — Protest Site",
+      "medicalTent": "Medical Tent — India Gate"
+    },
+    "beforeYouLeave": "Before You Leave",
+    "beforeYouLeaveItems": [
+      {
+        "icon": "Download",
+        "label": "Download this app",
+        "desc": "Save this page to your home screen. Everything works offline."
+      },
+      {
+        "icon": "MapPin",
+        "label": "Share your location",
+        "desc": "Tell a trusted contact where you're going and when you'll be back."
+      },
+      {
+        "icon": "Phone",
+        "label": "Save emergency numbers",
+        "desc": "Add 108, 100, and a lawyer's number to your speed dial."
+      },
+      {
+        "icon": "Shield",
+        "label": "Carry essentials",
+        "desc": "ID, cash, mask, water, power bank — don't skip the checklist."
+      }
+    ],
+    "changelog": "What's New",
+    "changelogItems": [
+      {
+        "date": "23 Jul 2026",
+        "text": "New: Privacy & Surveillance Guide and Evidence Preservation pages added"
+      },
+      {
+        "date": "22 Jul 2026",
+        "text": "Updated legal rights with latest BNSS amendments"
+      },
+      {
+        "date": "21 Jul 2026",
+        "text": "Fixed offline caching for emergency contacts"
+      }
+    ],
+    "seoTitle": "Cockroach Janta Party — CJP Helpline",
+    "seoDesc": "Works when the internet goes down. Emergency protest info, legal aid, live field updates, Know Your Rights — all offline, private, free. Built for CJP."
+  },
+  "emergency": {
+    "title": "Emergency Directory",
+    "subtitle": "Tap a number to call. Tap & hold to copy.",
+    "categories": {
+      "legal": "Legal Aid",
+      "medical": "Medical",
+      "helpline": "Helplines",
+      "safe_house": "Safe Houses"
+    },
+    "noContacts": "No contacts in this category",
+    "verified": "Verified",
+    "call": "Call",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "callAria": "Call {name} at {phone}",
+    "copyAria": "Copy {phone}",
+    "synced": "Synced",
+    "loadedFromCache": "Loaded from cache",
+    "footerNote": "Government helplines verified. Lawyer contacts community-sourced.",
+    "privacyTitle": "Privacy — We Don't Snitch",
+    "privacyDesc": "Every number cached on your phone. When internet goes down, they still work. Zero data collected. Period.",
+    "seoTitle": "Numbers They Don't Want You to Have",
+    "seoDesc": "One-tap emergency contacts and legal aid helplines for CJP student protesters. Verified numbers cached offline — works when internet is cut.",
+    "lawyerTitle": "Need a lawyer?",
+    "lawyerDesc": "Free legal aid is your right. Call NALSA for immediate assistance.",
+    "callLawyer": "Call NALSA Free Legal Aid"
+  },
+  "liveFeed": {
+    "title": "Live Field Feed",
+    "filters": {
+      "all": "All",
+      "medical": "Medical",
+      "legal": "Legal",
+      "safety": "Safety",
+      "general": "General"
+    },
+    "severity": {
+      "green": "Clear",
+      "yellow": "Caution",
+      "red": "Active"
+    },
+    "noAlerts": "No active alerts",
+    "lastUpdated": "Last updated",
+    "justNow": "Just now",
+    "mAgo": "m ago",
+    "hAgo": "h ago",
+    "dAgo": "d ago",
+    "cached": "Cached —",
+    "synced": "Synced",
+    "unknown": "unknown",
+    "refresh": "Refresh",
+    "refreshAria": "Refresh alerts",
+    "seoTitle": "Live Field Feed — CJP Helpline",
+    "seoDesc": "Real-time protest field updates, safety alerts, and verified CJP announcements. Cached offline.",
+    "featured": "Featured"
+  },
+  "legalRights": {
+    "title": "Know Your Rights (They Won't Tell You This)",
+    "categories": {
+      "detention": "During Detention",
+      "search_seizure": "Search & Seizure",
+      "questioning": "During Questioning",
+      "general": "General Rights"
+    },
+    "disclaimerTitle": "Disclaimer — Read Up, Stay Safe",
+    "disclaimerText": "This is not legal advice — it's your right to know. Laws change. Check with a lawyer. Everything here works offline.",
+    "sources": "Sources: Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023, Constitution of India, @lawyer_saheba on Instagram",
+    "synced": "Synced",
+    "availableOffline": "Available offline",
+    "seoTitle": "Know Your Rights — CJP Legal Guide",
+    "seoDesc": "Know your legal rights during protests under BNSS 2023 and Constitution of India. Detention, search, questioning — what to do."
+  },
+  "factCheck": {
+    "title": "Rumor Mill — Verified",
+    "verdicts": {
+      "true": "True",
+      "false": "False",
+      "misleading": "Misleading",
+      "unverified": "Unverified"
+    },
+    "bustRumors": "Bust the Rumor",
+    "description": "Curbing viral misinformation during internet blackouts and protest escalations. Verify before sharing.",
+    "source": "Source",
+    "seoTitle": "Fact Check — CJP Verified",
+    "seoDesc": "Verified fact checks on NEET paper leaks, court hearings, and protest-related rumors. Don't get played."
+  },
+  "submit": {
+    "title": "Submit Field Report",
+    "type": "Report Type",
+    "types": {
+      "medical": "Medical",
+      "legal": "Legal",
+      "safety": "Safety",
+      "general": "General"
+    },
+    "description": "Description",
+    "descriptionPlaceholder": "Describe what you're seeing...",
+    "location": "Location (optional)",
+    "locationPlaceholder": "e.g., India Gate, Delhi",
+    "send": "Submit Report",
+    "sending": "Submitting...",
+    "success": "Report submitted successfully",
+    "submitAnother": "Submit Another",
+    "validationError": "Enter a description",
+    "privacyTitle": "Privacy — We Don't Track You",
+    "privacyDesc": "No name. No phone. No location history. Nothing to seize.",
+    "seoTitle": "Send a Rant — Report What You See",
+    "seoDesc": "Send anonymous field reports to CJP admins. No personal data collected. Zero tracking."
+  },
+  "firstAid": {
+    "title": "First Aid & Safety Guide",
+    "printThis": "Print this. Memorize it. Your life matters.",
+    "source": "Source: Physicians for Human Rights (PHR) Protest Medicine Guide · Last updated: 23 Jul 2026",
+    "whatToDo": "What to do",
+    "doNot": "DO NOT",
+    "supplies": "Supplies to carry",
+    "seoTitle": "Field Medicine 101",
+    "seoDesc": "Tear gas treatment, lathi charge injury care, pepper spray first aid, dehydration, crowd crush safety. Cached on your phone — works without internet."
+  },
+  "safeZones": {
+    "title": "Safe Zones & Resources",
+    "subtitle": "Safe houses. Medical tents. Legal aid desks. All verified. Tap for directions.",
+    "getDirections": "Get directions",
+    "proTip": "Pro Tip",
+    "proTipDesc": "Know where to run before you get there. If internet goes down, you still know the way. Tell someone where you are.",
+    "seoTitle": "Where to Run — Safe Spots",
+    "seoDesc": "Verified safe zones near CJP protest areas — legal aid desks, medical tents, safe houses, hydration points with directions.",
+    "typeLabels": {
+      "legal": "Legal Aid",
+      "medical": "Medical",
+      "safe": "Safe House",
+      "alert": "Alert"
+    }
+  },
+  "bail": {
+    "title": "Bail & Legal Procedure",
+    "important": "Important",
+    "importantText": "This is a guide — not legal advice. Arrest procedures vary. Consult a lawyer immediately if detained.",
+    "memorize": "Memorize before you go",
+    "memorizeText": "Free legal aid: 15100 · Emergency: 108 · Nearest police station: know it · Lawyer contact: save it",
+    "seoTitle": "If You Get Picked Up — A Guide",
+    "seoDesc": "Complete guide to bail under BNSS for protesters. Bailable vs non-bailable, FIR process, legal aid numbers."
+  },
+  "checklist": {
+    "title": "Protest Checklist",
+    "prep": "Before You Step Out",
+    "categories": {
+      "essentials": "Essentials",
+      "safety": "Safety",
+      "medical": "Medical",
+      "legal": "Legal"
+    },
+    "addCustom": "Add custom item",
+    "items": {
+      "water": "Water bottle (1L)",
+      "ors": "ORS packets /Electral",
+      "mask": "N95 mask (2x)",
+      "id": "ID card (Aadhaar/Voter)",
+      "phone-charged": "Phone charged + power bank",
+      "emergency-nums": "Emergency numbers memorized",
+      "snacks": "Dry snacks (biscuits, nuts)",
+      "first-aid": "First aid kit (bandages, antiseptic)",
+      "wet-cloth": "Wet cloth / bandana for tear gas",
+      "eye-drops": "Saline eye drops",
+      "soap": "Small soap / dish soap for pepper spray",
+      "cash": "Cash (small bills) + bail money",
+      "lawyer-num": "Lawyer contact saved",
+      "medicines": "Personal medicines (if any)",
+      "glucose": "Glucose / sugar",
+      "whistle": "Whistle (to alert others)",
+      "power-bank": "Power bank + cable",
+      "chappal": "Sturdy closed-toe shoes (not chappals)",
+      "hat": "Cap / hat for sun protection",
+      "contacts-out": "Remove contact lenses"
+    },
+    "seoTitle": "What to Pack (Don't Be That Guy)",
+    "seoDesc": "Essential items checklist for protests. Pack smart — water, ID, meds, power bank, mask. Check before you leave."
+  },
+  "preparation": {
+    "title": "Protest Preparation",
+    "subtitle": "Before and after protest safety guide",
+    "warningTitle": "Internet shutdowns are common",
+    "warningText": "Internet will probably go down. Prepare before it does.",
+    "beforeProtest": "Before the Protest",
+    "afterProtest": "After the Protest",
+    "solidarityKit": "Solidarity Kit:",
+    "solidarityKitDesc": "Download before going. Works offline. Auto-updates when connected.",
+    "beforeItems": [
+      {
+        "label": "Download Offline Google Maps",
+        "desc": "Save Delhi/NCR map to your phone for navigation during internet shutdown"
+      },
+      {
+        "label": "Install Briar or BitChat",
+        "desc": "Uses Bluetooth to communicate when internet is cut. Works mesh-network style."
+      },
+      {
+        "label": "Memorize an exit location",
+        "desc": "Know a safe exit route and meetup point in case of emergency"
+      },
+      {
+        "label": "Write contacts on your arm",
+        "desc": "Use permanent marker: 2 lawyer numbers, 1 family contact, 1 medical contact"
+      },
+      {
+        "label": "Enable auto cloud backup",
+        "desc": "Set phone photos/videos to auto-upload so evidence is saved even if phone is seized"
+      },
+      {
+        "label": "Go with a buddy or group",
+        "desc": "Never protest alone — ensure someone knows your location at all times"
+      },
+      {
+        "label": "Download Solidarity Kit",
+        "desc": "Works offline and auto-updates when internet returns — protest.uskhokhar.xyz"
+      },
+      {
+        "label": "Carry ID and bail money",
+        "desc": "Aadhaar/Voter ID + ₹10,000-20,000 cash minimum for bail"
+      }
+    ],
+    "afterItems": [
+      "Take care of any immediate medical needs — refer to First Aid and Medical contacts",
+      "Account for everyone you attended with. Leave no one behind.",
+      "Download all videos, photos, and voice recordings for legal evidence",
+      "Store backup copies in cloud storage immediately",
+      "Contact a lawyer if anyone was detained",
+      "Rest, hydrate, eat — your health comes first"
+    ],
+    "seoTitle": "Before You Go Out — Prep Guide",
+    "seoDesc": "Before and after protest safety guide. Download offline maps, save emergency contacts, prepare for internet shutdowns."
+  },
+  "mentalHealth": {
+    "title": "Mental Health Support",
+    "subtitle": "Free and low-cost mental health support for protesters",
+    "youAreNotAlone": "You are not alone.",
+    "protestingIsHeavy": "Protesting is heavy. These pros offer free or low-cost help — because your mind matters as much as the movement.",
+    "onlineCounsellors": "Online Counsellors & Therapists",
+    "offlineClinics": "Offline Clinics",
+    "supportGroups": "Support Groups & Listening Circles",
+    "register": "Register",
+    "seoTitle": "Mental Health — You're Not Alone",
+    "seoDesc": "Free and low-cost mental health support for protesters. Online counsellors, offline clinics, support groups. You are not alone."
+  },
+  "aid": {
+    "title": "Aid & Accommodation",
+    "types": {
+      "accommodation": "Accommodation",
+      "aid": "Aid",
+      "medicalAid": "Medical Aid",
+      "volunteer": "Volunteer"
+    },
+    "seoTitle": "Free Food, Water, Shelter",
+    "seoDesc": "Free accommodation, food, water, and medical aid for CJP protesters. Verified resources."
+  },
+  "resources": {
+    "title": "Credible Resources",
+    "subtitle": "Verified news sources and emergency resources",
+    "trustedSources": "Trusted news sources during internet blocks",
+    "trustedSourcesDesc": "When mainstream media is unreliable, these independent pages keep you informed. Verified by CJP network.",
+    "viewOnInstagram": "View on Instagram",
+    "submitEvidence": "Submit Evidence of Violence",
+    "submitEvidenceDesc": "If you have witnessed or experienced police violence, submit evidence for documentation and legal action.",
+    "submitEvidenceForm": "Submit Evidence Form",
+    "seoTitle": "Trusted Sources — Don't Get Played",
+    "seoDesc": "Verified Instagram news sources and resources for NEET protest coverage. Don't get played by misinformation."
+  },
+  "manifesto": {
+    "title": "CJP Manifesto",
+    "subtitle": "Five demands. Zero sponsors. One large, stubborn swarm.",
+    "partyTitle": "Cockroach Janta Party",
+    "partyDesc": "A political front of the youth, by the youth, for the youth: Secular, Socialist, Democratic, and Lazy. Reclaiming the cockroach as a badge of resilience.",
+    "founded": "Founded May 16, 2026 · New Delhi",
+    "demands": {
+      "1": {
+        "title": "NEET Cancellation & Reform",
+        "desc": "Nullify NEET-UG 2024 results. Constitute a judicial commission to overhaul the exam system. Re-test under Supreme Court supervision."
+      },
+      "2": {
+        "title": "Anti-Paper-Leak Law",
+        "desc": "Enact a stringent law making exam paper leaks a cognizable, non-bailable offence with 10-year minimum sentence. Create a centralised secure digital exam infrastructure."
+      },
+      "3": {
+        "title": "Education Minister's Resignation",
+        "desc": "Demand the immediate resignation of Union Education Minister Dharmendra Pradhan for systemic failure in protecting the integrity of national examinations."
+      },
+      "4": {
+        "title": "Free Legal Aid for Protesters",
+        "desc": "Establish government-funded free legal aid desks at every district court for students facing politically motivated cases. No student should hire a lawyer to demand their right to education."
+      },
+      "5": {
+        "title": "Digital Rights Charter",
+        "desc": "Enact a Digital Rights Charter prohibiting internet shutdowns during examinations and protests. Ensure net neutrality, data privacy, and the right to peaceful digital assembly."
+      }
+    },
+    "join": "Join the Swarm",
+    "joinDesc": "Membership is open to the unemployed, the lazy, the chronically online, and anyone who has ever been told they amount to nothing. We are many. They are few.",
+    "socialInstagram": "Instagram",
+    "socialX": "X (Twitter)",
+    "socialSite": "Official Site",
+    "seoTitle": "CJP Manifesto",
+    "seoDesc": "Cockroach Janta Party's five demands: NEET cancellation, anti-paper-leak law, education minister resignation, free legal aid, digital rights charter."
+  },
+  "about": {
+    "title": "About CockroachHub",
+    "partyTitle": "Cockroach Janta Party",
+    "partyTagline": "Voice of the Lazy & Unemployed",
+    "partyDesc1": "The Cockroach Janta Party is a satirical political party and student protest movement founded on May 16, 2026 by Abhijeet Dipke. What started as an internet meme grew into a nationwide youth movement leading the NEET paper leak protests at Jantar Mantar, Delhi.",
+    "partyDesc2": "The party describes itself as 'a political front of the youth, by the youth, for the youth: Secular, Socialist, Democratic, and Lazy' — reclaiming the 'cockroach' label as a badge of resilience.",
+    "aboutApp": "About This App",
+    "appDesc": "CockroachHub is a protest resource hub designed specifically for student protesters in India. It provides verified emergency contacts, live field updates, legal rights information (BNSS-corrected), first aid guides, and mental health support — all cached on your device.",
+    "statWorks": "Works",
+    "statOffline": "Offline",
+    "statZero": "Zero",
+    "statNoData": "Data Collection",
+    "followCJP": "Follow CJP",
+    "officialWebsite": "Official Website",
+    "footer": "Built for the swarm. Works when the internet doesn't.",
+    "seoTitle": "About CJP Helpline",
+    "seoDesc": "CockroachHub is a protest resource hub built for the Cockroach Janta Party. Works offline. Zero data collection. Student support network.",
+    "communityTitle": "Youth Unmuted",
+    "communityTagline": "Amplifying the voices of young India",
+    "communityDesc": "Youth Unmuted is a community-driven platform amplifying student voices across India. We believe in free speech, factual reporting, and standing together during protests and political unrest.",
+    "communityWhatsApp": "WhatsApp Channel",
+    "communityInstagram": "Instagram",
+    "communityDiscord": "Discord Server",
+    "fundraiserTitle": "Support the Movement",
+    "fundraiserDesc": "Scan to contribute. Funds go towards legal aid, medical supplies, and protest relief efforts coordinated by Youth Unmuted."
+  },
+  "sos": {
+    "title": "SOS Emergency",
+    "subtitle": "One tap. GPS goes out. Admins know where you are.",
+    "presets": {
+      "detained": {
+        "label": "I'm being detained",
+        "desc": "Police are detaining me"
+      },
+      "policeForce": {
+        "label": "Police using force",
+        "desc": "Police using lathi charge / tear gas near me"
+      },
+      "medical": {
+        "label": "Medical emergency",
+        "desc": "Someone is injured and needs help"
+      },
+      "lost": {
+        "label": "Lost / separated",
+        "desc": "Separated from group, need to find safe zone"
+      }
+    },
+    "locationShared": "Location shared automatically",
+    "sent": "SOS Sent:",
+    "sentSubtext": "Admins have been notified. Help is being coordinated.",
+    "locationSharedStatus": "Location shared",
+    "sendAnother": "Send another",
+    "helperText": "Tap a preset to send an immediate alert",
+    "howWorks": "How It Works",
+    "howWorksDesc": "Tap → alert reaches admins in seconds. GPS turns on if available. Stay safe — we've got your back.",
+    "seoTitle": "Busted? Tap Here",
+    "seoDesc": "Send immediate emergency alert to CJP admins during detention or police violence. GPS location shared. One tap."
+  },
+  "torch": {
+    "title": "Flashlight",
+    "subtitle": "Max brightness white screen for light in dark areas",
+    "turnOn": "Turn On",
+    "turnOff": "Tap to turn off",
+    "tapAnywhere": "Tap anywhere to turn off",
+    "seoTitle": "Flashlight",
+    "seoDesc": "Max brightness white screen for light in dark areas during protests and power cuts."
+  },
+  "notFound": {
+    "title": "This page scurried away",
+    "desc": "Like a cockroach when the lights came on. We've been through Jantar Mantar, lathi charges, and internet shutdowns — and we're still here.",
+    "desc2": "But don't worry — cockroaches always come back. Try the home page.",
+    "backHome": "Back to Home",
+    "seoTitle": "Page Not Found — 404",
+    "seoDesc": "This page has scurried away like a cockroach. But don't worry — we always come back."
+  },
+  "admin": {
+    "login": "Admin Login",
+    "loginSubtitle": "CockroachHub Admin Panel",
+    "email": "Email",
+    "emailPlaceholder": "admin@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "Enter password",
+    "signIn": "Sign In",
+    "signingIn": "Signing in...",
+    "helperText": "Enter your credentials",
+    "dashboard": "Dashboard",
+    "dashboardGreeting": "Welcome back,",
+    "submissions": "Submissions",
+    "alerts": "Alerts",
+    "factChecks": "Fact Checks",
+    "contacts": "Emergency Contacts",
+    "rights": "Legal Rights",
+    "admins": "Admins",
+    "announcements": "Announcements",
+    "detainees": "Detainees",
+    "ipBlacklist": "IP Blacklist",
+    "auditLog": "Audit Log",
+    "loginAttempts": "Login Attempts",
+    "logout": "Logout",
+    "signOut": "Sign Out",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "approve": "Approve",
+    "reject": "Reject",
+    "publish": "Publish",
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete",
+    "add": "Add",
+    "addAdmin": "Add Admin",
+    "new": "New",
+    "newAlert": "New Alert",
+    "all": "All",
+    "successful": "Successful",
+    "failed": "Failed",
+    "noneYet": "None yet",
+    "draft": "Draft",
+    "active": "Active",
+    "inactive": "Inactive",
+    "super": "Super",
+    "you": "You",
+    "loading": "Loading...",
+    "selectAll": "Select all",
+    "deselectAll": "Deselect all",
+    "batchApprove": "Approve ({count})",
+    "batchReject": "Reject ({count})",
+    "noData": {
+      "submissions": "No {filter} submissions",
+      "alerts": "No alerts",
+      "contacts": "No contacts",
+      "rights": "No rights",
+      "admins": "No admins",
+      "announcements": "No announcements",
+      "detainees": "No detainees recorded",
+      "ipBlacklist": "No blacklisted IPs",
+      "loginAttempts": "No login attempts",
+      "auditLog": "No log entries"
+    },
+    "stats": {
+      "activeAlerts": "Active Alerts",
+      "pendingSubmissions": "Pending Submissions",
+      "publishedChecks": "Published Fact Checks",
+      "totalContacts": "Emergency Contacts",
+      "totalAdmins": "Admins"
+    },
+    "approvalRate": "Approval Rate",
+    "ofReviewed": "of reviewed",
+    "byType": "By Type",
+    "alertSeverity": "Alert Severity",
+    "pushSubscribers": "Push Subscribers",
+    "quickActions": "Quick Actions",
+    "reviewSubmissions": "Review Submissions",
+    "detaineeTracker": "Detainee Tracker",
+    "syncHelpline": "Sync Helpline",
+    "emergencyBroadcast": "Emergency Broadcast",
+    "broadcastModalTitle": "Emergency Broadcast",
+    "broadcastWarning": "This sends a push notification to ALL subscribers.",
+    "severity": "Severity",
+    "title": "Title",
+    "description": "Description",
+    "type": "Type",
+    "cancel": "Cancel",
+    "update": "Update",
+    "broadcasting": "Broadcasting...",
+    "broadcast": "Broadcast",
+    "redUrgent": "Red — Urgent",
+    "yellowCaution": "Yellow — Caution",
+    "changePassword": "Change Password",
+    "mustChangePassword": " — you must change your password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password (min 8 chars)",
+    "confirmPassword": "Confirm New Password",
+    "hidePasswords": "Hide",
+    "showPasswords": "Show",
+    "changing": "Changing...",
+    "name": "Name",
+    "permissionNotice": "Only super admins can manage admin accounts.",
+    "message": "Message",
+    "messagePlaceholder": "e.g., Metro route 2 blocked — avoid area",
+    "status": "Status",
+    "filterDetainee": {
+      "detained": "detained",
+      "released": "released",
+      "hospitalized": "hospitalized",
+      "unknown": "unknown"
+    },
+    "ipAddress": "IP Address",
+    "ipPlaceholder": "e.g., 192.168.1.1",
+    "reason": "Reason (opt)",
+    "reasonPlaceholder": "e.g., Spam submissions",
+    "blacklist": "Blacklist",
+    "blacklistIP": "Blacklist IP",
+    "actions": {
+      "create": "Create",
+      "update": "Update",
+      "delete": "Delete",
+      "cancel": "Cancel"
+    },
+    "errors": {
+      "enterEmailAndPassword": "Please enter email and password",
+      "loginFailed": "Login failed",
+      "passwordMinLength": "Password must be at least 8 characters",
+      "passwordMinLength8": "Password must be at least 8 characters",
+      "passwordsDontMatch": "Passwords don't match",
+      "validEmail": "Please enter a valid email",
+      "fillAllFields": "Please fill all fields",
+      "selectFirst": "Select a submission first",
+      "failedToPublish": "Failed to publish"
+    },
+    "categories": {
+      "detention": "Detention",
+      "general": "General",
+      "helpline": "Helpline",
+      "legal": "Legal",
+      "medical": "Medical",
+      "questioning": "Questioning",
+      "safeHouse": "Safe House",
+      "searchSeizure": "Search & Seizure"
+    },
+    "severityLevels": {
+      "active": "Active",
+      "caution": "Caution",
+      "clear": "Clear"
+    },
+    "activate": "Activate",
+    "activated": "Activated",
+    "addContact": "Add Contact",
+    "addDetainee": "Add Detainee",
+    "addIP": "Add IP",
+    "addLegalRight": "Add Legal Right",
+    "adminCreated": "Admin created",
+    "category": "Category",
+    "cityOpt": "City",
+    "claim": "Claim",
+    "confirmDelete": "Are you sure you want to delete this?",
+    "content": "Content",
+    "createAdmin": "Create Admin",
+    "createAlert": "Create Alert",
+    "createFactCheck": "Create Fact Check",
+    "creating": "Creating...",
+    "deleteAria": "Delete {title}",
+    "descriptionOpt": "Description",
+    "editAlert": "Edit Alert",
+    "editAria": "Edit {title}",
+    "editDetainee": "Edit Detainee",
+    "explanation": "Explanation",
+    "ipBlacklisted": "IP blacklisted",
+    "joined": "Joined",
+    "locationOpt": "Location",
+    "locationPlaceholder": "e.g., India Gate, Delhi",
+    "newAnnouncement": "New Announcement",
+    "notesOpt": "Notes",
+    "on": "on",
+    "passwordChanged": "Password changed",
+    "phone": "Phone",
+    "phoneOpt": "Phone (optional)",
+    "publishedAsAlert": "Published as Alert #{id}",
+    "selectSubmission": "Select submission {id}",
+    "sourceOpt": "Source",
+    "sortOrder": "Order:",
+    "synced": "Synced",
+    "verdict": "Verdict",
+    "welcome": "Welcome, ",
+    "alertBroadcasted": "Broadcast sent — Alert #{alert_id}, {push_sent} notified",
+    "syncFailed": "Helpline sync failed",
+    "types": {
+      "safety": "Safety",
+      "medical": "Medical",
+      "legal": "Legal",
+      "general": "General"
+    },
+    "seoTitle": "Admin — CJP Helpline",
+    "seoDesc": "CockroachHub admin panel. Manage submissions, alerts, contacts, legal rights, and IP blacklist.",
+    "metroDisruptions": "Metro Disruptions",
+    "metroTitle": "Manage Metro Disruptions",
+    "createDisruption": "Create Disruption",
+    "editDisruption": "Edit Disruption",
+    "confirmDeleteDisruption": "Delete this disruption?",
+    "disruptionDeleted": "Disruption deleted",
+    "disruptionCreated": "Disruption created",
+    "disruptionUpdated": "Disruption updated",
+    "disruptionPublished": "Disruption published",
+    "allDisruptions": "All",
+    "created": "Created",
+    "source": "Source",
+    "metroStations": "Metro Stations"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "offline": "You are offline. Showing cached data.",
+    "online": "Back online",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "close": "Close",
+    "save": "Save",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "created": "Created",
+    "removed": "Removed",
+    "updated": "Updated",
+    "reloadPage": "Reload Page",
+    "somethingWentWrong": "Something went wrong",
+    "unexpectedError": "An unexpected error occurred.",
+    "deleted": "Deleted",
+    "actions": "Actions",
+    "noResults": "No results",
+    "name": "Name"
+  },
+  "panic": {
+    "todaysWeather": "Today's Weather",
+    "back": "Back",
+    "quickExit": "Quick exit — hides content",
+    "exit": "Exit",
+    "updated": "India Meteorological Department • Updated just now",
+    "temp": "32°C",
+    "location": "New Delhi, India",
+    "condition": "Partly cloudy",
+    "forecastMon": "Mon",
+    "forecastTue": "Tue",
+    "forecastWed": "Wed"
+  },
+  "stealth": {
+    "protected": "Protected",
+    "enterPin": "Enter PIN to access CockroachHub",
+    "setPin": "Set a 4-digit PIN to protect this app",
+    "enterPinInput": "Enter PIN",
+    "newPin": "New 4-digit PIN",
+    "confirmPin": "Confirm PIN",
+    "unlock": "Unlock",
+    "setPinEnter": "Set PIN & Enter",
+    "resetPin": "Reset PIN (clears data)"
+  },
+  "search": {
+    "placeholder": "Search alerts, contacts, rights...",
+    "ariaLabel": "Search",
+    "mobilePlaceholder": "Search..."
+  },
+  "push": {
+    "enabled": "Notifications on",
+    "disabled": "Notifications off",
+    "enable": "Enable push",
+    "disable": "Disable push"
+  },
+  "install": {
+    "title": "Install app",
+    "button": "Install",
+    "mobile": "Install App"
+  },
+  "share": {
+    "copied": "Copied! Forward it to your group.",
+    "copyLabel": "Copied",
+    "share": "Share",
+    "shareAria": "Share {name} contact",
+    "whatsappAria": "Share {name} on WhatsApp"
+  },
+  "offline": {
+    "banner": "You are offline — showing cached data.",
+    "backendBanner": "Backend server unreachable — showing cached data. Some features may not work.",
+    "newVersion": "New version available",
+    "update": "Update"
+  },
+  "privacy": {
+    "title": "Privacy & Surveillance Guide",
+    "subtitle": "How to protect your phone and data during protests",
+    "sections": {
+      "phoneSecurity": {
+        "title": "Phone Security Before You Go",
+        "items": [
+          "Enable a strong PIN/password — not pattern lock",
+          "Disable biometric unlock (police can force your finger/face)",
+          "Turn off Wi-Fi and Bluetooth when not in use to avoid IMSI catchers",
+          "Enable auto-lock with shortest timeout (30 seconds)",
+          "Remove sensitive apps from your home screen"
+        ]
+      },
+      "digitalPrivacy": {
+        "title": "Digital Privacy During Protests",
+        "items": [
+          "Use VPN at all times — prefer WireGuard or OpenVPN",
+          "Turn on airplane mode near protest sites to avoid tower tracking",
+          "Use encrypted messaging (Signal, Briar, BitChat — NOT SMS)",
+          "Disable location history in Google Maps settings",
+          "Avoid posting real-time location on social media"
+        ]
+      },
+      "ifSeized": {
+        "title": "If Your Phone Is Seized",
+        "items": [
+          "You have the right to remain silent — do not give passwords",
+          "Police cannot compel you to unlock your phone (Article 20(3))",
+          "Enable auto-erase or remote wipe if you have time",
+          "Log out of all accounts remotely if possible",
+          "Contact a lawyer immediately — do not sign anything"
+        ]
+      },
+      "surveillance": {
+        "title": "Avoiding Surveillance",
+        "items": [
+          "Assume all communications can be monitored during protests",
+          "Use burner SIMs if possible for protest coordination",
+          "Remove your phone battery if you suspect active tracking",
+          "Cover cameras with tape when not in use",
+          "Watch for stalkerware — check installed apps regularly"
+        ]
+      }
+    },
+    "seoTitle": "Privacy & Surveillance Guide — CJP",
+    "seoDesc": "Protect your phone and data during protests. Phone security, digital privacy, what to do if your phone is seized, avoiding surveillance."
+  },
+  "evidence": {
+    "title": "Evidence Preservation Guide",
+    "subtitle": "How to document and preserve evidence of police violence or human rights violations",
+    "sections": {
+      "capture": {
+        "title": "Capturing Evidence Safely",
+        "items": [
+          "Record video horizontally when possible — captures more context",
+          "Start each video with: date, time, location (say it aloud)",
+          "Capture identifying details: badge numbers, vehicle plates, unit markers",
+          "Keep recording even during escalation — continuous footage is stronger",
+          "Stay at safe distance — your safety comes first"
+        ]
+      },
+      "preserve": {
+        "title": "Preserving Digital Evidence",
+        "items": [
+          "Upload footage to cloud immediately after leaving the site",
+          "Use multiple platforms: Google Drive, Dropbox, Proton Drive",
+          "Share copies with a trusted contact not at the protest",
+          "Do not edit or trim raw footage — unaltered files hold more weight",
+          "Keep metadata intact (date, time, location stamps)"
+        ]
+      },
+      "legal": {
+        "title": "Legal Use of Evidence",
+        "items": [
+          "File an FIR with the nearest police station within 24 hours",
+          "Submit footage on a USB drive — keep the original on your device",
+          "Get a free legal aid lawyer via NALSA (15100) before submitting anything",
+          "Document your own statement: what you saw, when, where, who",
+          "Collect witness names and contact information"
+        ]
+      },
+      "medical": {
+        "title": "Medical Evidence After Violence",
+        "items": [
+          "Get a medical examination within 24 hours at a government hospital",
+          "Request a copy of the medical report (MLC — Medico-Legal Certificate)",
+          "Photograph injuries with a ruler or object for scale",
+          "Keep all prescription receipts and pharmacy bills",
+          "Do not shower before the medical exam if you were pepper-sprayed or tear-gassed"
+        ]
+      }
+    },
+    "seoTitle": "Evidence Preservation Guide — CJP",
+    "seoDesc": "Document and preserve evidence of police violence. Capture safely, preserve digitally, use legally, document medical evidence."
+  },
+  "errors": {
+    "somethingWentWrong": "Something went wrong",
+    "unexpectedError": "An unexpected error occurred.",
+    "reloadPage": "Reload Page",
+    "keepClicking": "Keep clicking..."
+  },
+  "footer": {
+    "heading": "Cockroach Janta Party — Helpline",
+    "tagline": "Works when the internet doesn't. Which it will.",
+    "social": "Instagram: @cockroachjantaparty · X: @cockroachisback · Telegram: cockroachjantaparty",
+    "menu": "Menu",
+    "team": "Built by Youth Unmuted & CJP — Learn more"
+  },
+  "easterEgg": {
+    "mainBhiCockroach": "Main Bhi Cockroach! — Join CJP"
+  },
+  "theme": {
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode",
+    "toggle": "Toggle dark/light"
+  },
+  "lang": {
+    "en": "English",
+    "hi": "हिन्दी",
+    "shortEn": "EN",
+    "shortHi": "HI",
+    "switchTo": "Switch language"
+  },
+  "autoErase": {
+    "erased": "Auto-erased for safety. Reloading...",
+    "warning": "Auto-erase in 30s — tap anywhere to keep data"
+  },
+  "offlineQueue": {
+    "sent": "Report sent!",
+    "savedOffline": "Saved offline — will send when internet returns.",
+    "flushed": "Sent {count} queued reports!"
+  },
+  "metro": {
+    "title": "Delhi Metro Status",
+    "subtitle": "Real-time station disruptions during protests and emergencies",
+    "searchPlaceholder": "Search stations...",
+    "filterAll": "All Lines",
+    "status": {
+      "open": "Open",
+      "limited": "Limited",
+      "closed": "Closed"
+    },
+    "statusDesc": {
+      "open": "Normal service",
+      "limited": "Reduced service",
+      "closed": "Station closed"
+    },
+    "card": {
+      "area": "Area",
+      "interchange": "Interchange",
+      "alternatives": "Alternatives"
+    },
+    "detail": {
+      "lastUpdated": "Last updated",
+      "reason": "Reason",
+      "lines": "Lines",
+      "type": "Type",
+      "coordinates": "Coordinates"
+    },
+    "networkOverview": "Network Overview",
+    "totalStations": "Total Stations",
+    "activeDisruptions": "Active Disruptions",
+    "interchanges": "Interchanges",
+    "reportDisruption": "Report Disruption",
+    "reportTitle": "Report a Metro Disruption",
+    "reportDesc": "Report station closure or limited service at this station",
+    "reportReason": "What's happening?",
+    "reportReasonPlaceholder": "e.g., Station closed due to police presence",
+    "reportSuccess": "Disruption reported! Awaiting admin review.",
+    "reportSelectStatus": "Select status",
+    "offlineData": "Showing cached metro data",
+    "seoTitle": "Delhi Metro Status — CJP Helpline",
+    "seoDesc": "Real-time Delhi Metro station disruptions during protests. Check station status, report closures, see alternative routes. Crowdsourced.",
+    "protestHub": {
+      "title": "🎯 Protest Hub: Jantar Mantar",
+      "subtitle": "Your navigation hub for getting to and from the protest site",
+      "destination": "Jantar Mantar, Delhi",
+      "destinationDesc": "Main protest site • Connaught Place area",
+      "yourLocation": "📍 Your Location",
+      "detecting": "Detecting your location...",
+      "gpsFailed": "Enable location access to find your nearest open station",
+      "gpsDenied": "Location access denied. Search for a station below or allow location in your browser.",
+      "nearestStation": "Nearest Open Station",
+      "noOpenNearby": "No open stations found near you",
+      "stationsNear": "Stations near Jantar Mantar",
+      "walkingDistance": "Walking distance",
+      "estTime": "Est. walking time",
+      "getDirections": "Get Directions",
+      "openInMaps": "🗺️ Open Jantar Mantar in Google Maps",
+      "viaStation": "via {station}",
+      "allClosed": "All nearby stations are affected by disruptions",
+      "minutes": "min",
+      "meters": "m",
+      "km": "km"
+    }
+  },
+  "bailGuide": {
+    "bailable": {
+      "title": "Bailable Offences (Right to Bail — BNSS Section 478)"
+    },
+    "nonBailable": {
+      "title": "Non-Bailable Offences (Bail at Court Discretion — BNSS Section 480)"
+    },
+    "anticipatory": {
+      "title": "Anticipatory Bail (BNSS Section 482)"
+    },
+    "procedure": {
+      "title": "What happens after arrest (step by step)"
+    },
+    "legalAid": {
+      "title": "Free legal aid & lawyer contacts"
+    }
+  },
+  "map": {
+    "title": "Protest Map",
+    "subtitle": "Jantar Mantar · Metro stations · Safe zones — all on one map",
+    "embedMap": "OpenStreetMap (free, no API key needed)",
+    "markers": "Points on this map",
+    "stations": "Metro Stations",
+    "safeZones": "Safe Zones",
+    "yourLocation": "Your Location",
+    "detecting": "Detecting...",
+    "detect": "Detect My Location",
+    "noLocation": "Enable GPS to see your position on the map",
+    "legend": "Legend",
+    "legendOpen": "Open station",
+    "legendLimited": "Limited service",
+    "legendClosed": "Closed station",
+    "legendLegal": "Legal aid",
+    "legendMedical": "Medical tent",
+    "legendSafe": "Safe house",
+    "legendJm": "Jantar Mantar",
+    "routePlanner": "Route Planner",
+    "routePlannerDesc": "Find the best way to Jantar Mantar from your location",
+    "routeFrom": "From",
+    "routeTo": "Jantar Mantar, Delhi",
+    "routeStepWalk": "Walk to {station}",
+    "routeStepLine": "Take {line} Line to {station}",
+    "routeStepWalkTo": "Walk to Jantar Mantar ({dist})",
+    "routeNoPath": "Could not find a route — check station statuses",
+    "routeOpenNow": "Open now",
+    "routeStartSearch": "Enter your starting point or enable GPS",
+    "startSearch": "Search starting station..."
+  },
+  "group": {
+    "seoTitle": "Group Check-in",
+    "seoDesc": "Check in with your protest group — share your location and status",
+    "title": "Group Check-in",
+    "subtitle": "Stay connected with your group during protests",
+    "createTitle": "Create a Group",
+    "createDesc": "Get a 6-character code to share with your friends",
+    "yourName": "Your name",
+    "createBtn": "Create Group",
+    "joinTitle": "Join a Group",
+    "joinDesc": "Enter the code your friend shared with you",
+    "groupCode": "Group code (e.g. ABC123)",
+    "joinBtn": "Join Group",
+    "groupCodeLabel": "Group Code",
+    "copied": "Copied!",
+    "copy": "Copy",
+    "refresh": "Refresh",
+    "yourStatus": "Your status",
+    "safe": "Safe",
+    "needHelp": "Need Help",
+    "checkedInSafe": "Checked in — Safe!",
+    "helpAlertSent": "Help alert sent!",
+    "members": "Members",
+    "noMembers": "No members yet",
+    "unknown": "Unknown",
+    "needsHelp": "Needs help!",
+    "map": "Map",
+    "gpsWarning": "Location not available — checkin sent without GPS"
+  },
+  "prepare": {
+    "title": "Prepare — Offline Packs",
+    "subtitle": "See what's cached on your phone for each protest site. Everything works offline.",
+    "ready": "Ready ✅",
+    "download": "Download Pack",
+    "downloading": "Preparing...",
+    "stations": "Metro stations",
+    "safeZones": "Safe zones",
+    "contacts": "Emergency contacts",
+    "guides": "First Aid + Bail + Rights",
+    "cached": "Cached",
+    "allReady": "Everything is cached — you're good to go!",
+    "allReadyDesc": "All guides, contacts, metro data, and safe zones are stored on your phone. No internet needed.",
+    "packReady": "Pack ready — all resources cached for this area",
+    "resourcesAvailable": "Resources available for this area",
+    "locations": {
+      "jantar-mantar": "Jantar Mantar",
+      "india-gate": "India Gate",
+      "ramlila-maidan": "Ramlila Maidan",
+      "central-secretariat": "Central Secretariat",
+      "mandi-house": "Mandi House"
+    }
+  },
+  "bus": {
+    "title": "Bus Routes to Protest Sites",
+    "subtitle": "DTG bus routes heading towards Jantar Mantar, Patel Chowk, and Central Secretariat",
+    "busNumber": "Bus No.",
+    "from": "Starting Point",
+    "to": "Ending Point / Towards",
+    "noRoutes": "No bus routes found",
+    "tabs": {
+      "pallika": "Pallika Kendra",
+      "patel": "Patel Chowk",
+      "secretariat": "Central Secretariat"
+    },
+    "seoTitle": "Bus Routes — CJP Helpline",
+    "seoDesc": "Delhi bus routes to protest sites near Jantar Mantar. DTC bus numbers, starting points, and destinations.",
+    "searchPlaceholder": "Search bus number, start or end point..."
+  }
+}

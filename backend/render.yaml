@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: cockroachhub-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: cockroachhub-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_NAME
+        value: Super Admin
+      - key: ALLOWED_ORIGINS
+        sync: false
+
+databases:
+  - name: cockroachhub-db
+    plan: free
