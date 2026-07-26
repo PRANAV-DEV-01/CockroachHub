@@ -10,8 +10,13 @@ class Settings(BaseSettings):
     admin_password: str = ""  # REQUIRED — set via ADMIN_PASSWORD env var
     admin_name: str = "Super Admin"
     vapid_private_key: str = ""  # Optional — auto-generated if not set
+    allowed_origins: str = "http://localhost:5173,http://localhost:4173"
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
+
+    @property
+    def allowed_origins_list(self) -> list[str]:
+        return [o.strip() for o in self.allowed_origins.split(",") if o.strip()]
 
 
 settings = Settings()

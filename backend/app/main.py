@@ -11,6 +11,7 @@ from starlette.responses import Response
 from sqlalchemy import select, text
 
 from app.database import async_session
+from app.config import settings
 from app.routers import admin, auth, public
 from app.seed import seed_database, seed_metro_stations, seed_safe_zones
 from app.docx_sync import sync_from_docx
@@ -40,14 +41,14 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
         response.headers["X-XSS-Protection"] = "1; mode=block"
         response.headers["Referrer-Policy"] = "no-referrer"
         response.headers["Permissions-Policy"] = "geolocation=(self), microphone=(), camera=()"
-        response.headers["Content-Security-Policy"] = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://cockroachhub.lol; img-src 'self' data:; font-src 'self'"
+        response.headers["Content-Security-Policy"] = f"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' {' '.join(settings.allowed_origins_list)}; img-src 'self' data:; font-src 'self'"
         return response
 
 
 app.add_middleware(SecurityHeadersMiddleware)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://cockroachhub.lol", "http://localhost:5173", "http://localhost:4173"],
+    allow_origins=settings.allowed_origins_list,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
