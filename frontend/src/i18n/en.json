@@ -31,7 +31,10 @@
     "map": "Map",
     "group": "Group",
     "prepare": "Prepare",
-    "bus": "Bus"
+    "bus": "Bus",
+    "news": "News",
+    "contactAdmin": "Message",
+    "offlineMap": "Map"
   },
   "home": {
     "trending": "Trending",
@@ -716,7 +719,11 @@
     "allDisruptions": "All",
     "created": "Created",
     "source": "Source",
-    "metroStations": "Metro Stations"
+    "metroStations": "Metro Stations",
+    "news": "News Posts",
+    "newsTitle": "News Submissions",
+    "messages": "Messages",
+    "messagesTitle": "User Messages"
   },
   "common": {
     "loading": "Loading...",
@@ -1107,5 +1114,37 @@
     "seoTitle": "Bus Routes — CJP Helpline",
     "seoDesc": "Delhi bus routes to protest sites near Jantar Mantar. DTC bus numbers, starting points, and destinations.",
     "searchPlaceholder": "Search bus number, start or end point..."
+  },
+  "news": {
+    "title": "Community News",
+    "subtitle": "Share updates, photos, and videos from the ground",
+    "seoDesc": "Community news feed for CJP protesters. Share and read verified updates from the field.",
+    "share": "Share",
+    "post": "Post",
+    "addMedia": "Add Photo/Video",
+    "titlePlaceholder": "Headline...",
+    "bodyPlaceholder": "What's happening? Share details, photos, videos...",
+    "noPosts": "No approved posts yet. Be the first to share!",
+    "moderation": "All posts are reviewed by admins before appearing here. Your privacy is protected — no tracking."
+  },
+  "contact": {
+    "title": "Message Admin",
+    "subtitle": "Send a message directly to the admin team",
+    "seoDesc": "Send a message to CockroachHub admins. Report issues, request features, or share feedback.",
+    "titlePlaceholder": "Subject...",
+    "bodyPlaceholder": "Write your message to the admin team...",
+    "sendMessage": "Send Message",
+    "sent": "Sent!",
+    "success": "Message sent! Admin will read it soon.",
+    "yourMessages": "Your Messages",
+    "read": "Read",
+    "delivered": "Delivered"
+  },
+  "offlineMap": {
+    "title": "Offline India Map",
+    "subtitle": "Reference map of major cities — works without internet",
+    "seoDesc": "Offline reference map of India with major cities for protest navigation.",
+    "tipTitle": "Tip:",
+    "tip": "Save screenshots of this map before heading out. Works completely offline — no internet needed."
   }
 }

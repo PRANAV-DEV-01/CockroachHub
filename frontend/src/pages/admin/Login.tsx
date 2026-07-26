@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Shield, Eye, EyeOff } from "lucide-react";
 import { Button } from "../../components/ui/Button";
-import api from "../../lib/api";
+import { API_BASE } from "../../lib/apiBase";
 import { mockLogin } from "../../lib/mockAuth";
 import { useAuthStore } from "../../store/authStore";
 import { useLocale } from "../../hooks/useLocale";
@@ -23,8 +23,17 @@ export default function AdminLogin() {
     try {
       let data;
       try {
-        const res = await api.post("/auth/login", { email, password: pw });
-        data = res.data;
+        const ctrl = new AbortController();
+        const timer = setTimeout(() => ctrl.abort(), 3000);
+        const res = await fetch(`${API_BASE}/auth/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password: pw }),
+          signal: ctrl.signal,
+        });
+        clearTimeout(timer);
+        if (!res.ok) throw new Error("backend down");
+        data = await res.json();
       } catch {
         data = await mockLogin(email, pw);
       }

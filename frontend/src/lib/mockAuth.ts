@@ -9,12 +9,22 @@ const MOCK_ADMIN = {
 };
 
 const MOCK_PW = "admin123";
-const MOCK_TOKEN = "mock_" + crypto.randomUUID();
+
+function safeToken(): string {
+  try {
+    if (typeof crypto !== "undefined" && crypto.randomUUID) {
+      return "mock_" + crypto.randomUUID();
+    }
+  } catch {}
+  return "mock_" + Math.random().toString(36).slice(2) + Date.now().toString(36);
+}
+
+const MOCK_TOKEN = safeToken();
 
 export async function mockLogin(email: string, password: string) {
-  await new Promise((r) => setTimeout(r, 400));
+  await new Promise((r) => setTimeout(r, 300));
   if (email === MOCK_ADMIN.email && password === MOCK_PW) {
     return { access_token: MOCK_TOKEN, admin: MOCK_ADMIN };
   }
-  throw new Error("Invalid credentials");
+  throw new Error("Invalid email or password");
 }

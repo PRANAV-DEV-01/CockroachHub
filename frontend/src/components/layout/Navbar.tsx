@@ -3,6 +3,7 @@ import {
   Flame, Phone, Radio, Scale, ShieldCheck, Menu, X, Send, Search, Shield,
   Moon, Sun, Download, Bell, BellOff, Heart, AlertTriangle, Sun as SunIcon,
   ClipboardList, MapPin, Lock, BookOpen, Droplets, Globe, Eye, Train, Users, Bus,
+  Newspaper, MessageSquare, Map,
 } from "lucide-react";
 import { memo, useCallback, useRef, useState } from "react";
 import { useTheme } from "../../hooks/useTheme";
@@ -36,6 +37,9 @@ const pageImports: Record<string, () => Promise<any>> = {
   "/group": () => import("../../pages/GroupCheckin"),
   "/prepare": () => import("../../pages/Prepare"),
   "/bus": () => import("../../pages/BusRoutes"),
+  "/news": () => import("../../pages/NewsFeed"),
+  "/contact-admin": () => import("../../pages/ContactAdmin"),
+  "/offline-map": () => import("../../pages/OfflineMap"),
 };
 
 const navLinks: { to: string; key: string; icon: any }[] = [
@@ -60,6 +64,9 @@ const navLinks: { to: string; key: string; icon: any }[] = [
   { to: "/evidence", key: "evidence", icon: Shield },
   { to: "/manifesto", key: "manifesto", icon: ShieldCheck },
   { to: "/about", key: "about", icon: Shield },
+  { to: "/news", key: "news", icon: Newspaper },
+  { to: "/contact-admin", key: "contactAdmin", icon: MessageSquare },
+  { to: "/offline-map", key: "offlineMap", icon: Map },
 ];
 
 const NavLink = memo(({ to, icon: Icon, isActive, label }: { to: string; icon: any; isActive: boolean; label: string }) => {
@@ -227,19 +234,21 @@ export const Navbar = memo(function Navbar({ onLogoClick }: { onLogoClick?: () =
 
     {/* Mobile Bottom Navigation */}
     <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-ph-border bg-ph-dark md:hidden safe-area-bottom">
-      <div className="flex items-center justify-around min-h-[56px] px-1">
+      <div className="flex items-center justify-around min-h-[52px] px-0.5">
         {[
           { to: "/", key: "home", icon: Flame },
           { to: "/sos", key: "sos", icon: AlertTriangle, urgent: true },
-  { to: "/metro", key: "metro", icon: Train },
-  { to: "/bus", key: "bus", icon: Bus },
-          { to: "/live-feed", key: "liveFeed", icon: Radio },
+          { to: "/metro", key: "metro", icon: Train },
           { to: "/emergency", key: "emergency", icon: Phone },
+          { to: "/news", key: "news", icon: Newspaper },
+          { to: "/contact-admin", key: "contactAdmin", icon: MessageSquare },
+          { to: "/live-feed", key: "liveFeed", icon: Radio },
+          { to: "/offline-map", key: "offlineMap", icon: Map },
         ].map(({ to, key, icon: Icon, urgent }) => (
           <Link
             key={to}
             to={to}
-            className={`flex flex-col items-center gap-0.5 px-3 py-2 min-w-0 ${
+            className={`flex flex-col items-center gap-0.5 px-1 py-1.5 min-w-0 ${
               urgent
                 ? "text-ph-red"
                 : loc.pathname === to
@@ -247,15 +256,15 @@ export const Navbar = memo(function Navbar({ onLogoClick }: { onLogoClick?: () =
                 : "text-ph-text-muted hover:text-white"
             }`}
           >
-            <Icon className={`h-5 w-5 ${urgent ? "animate-pulse" : ""}`} />
-            <span className="text-[10px] font-bold leading-tight">{t("nav." + key)}</span>
+            <Icon className={`h-[18px] w-[18px] ${urgent ? "animate-pulse" : ""}`} />
+            <span className="text-[9px] font-bold leading-tight truncate max-w-[48px]">{t("nav." + key)}</span>
           </Link>
         ))}
       </div>
     </nav>
 
     {/* Spacer for bottom nav on mobile */}
-    <div className="h-[56px] md:hidden" />
+    <div className="h-[52px] md:hidden" />
     </>
   );
 });

@@ -1,7 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   LayoutDashboard, Inbox, Radio, ShieldCheck, Phone, Scale, Users, LogOut, ChevronLeft, Megaphone,
-  ClipboardList, Ban, History, UserPlus, Train,
+  ClipboardList, Ban, History, UserPlus, Train, Newspaper, MessageSquare,
 } from "lucide-react";
 import { useAuthStore } from "../../store/authStore";
 import { useLocale } from "../../hooks/useLocale";
@@ -21,6 +21,8 @@ const links: { to: string; key: string; icon: any }[] = [
   { to: "/admin/audit-log", key: "auditLog", icon: History },
   { to: "/admin/login-attempts", key: "loginAttempts", icon: History },
   { to: "/admin/admins", key: "admins", icon: Users },
+  { to: "/admin/news", key: "news", icon: Newspaper },
+  { to: "/admin/messages", key: "messages", icon: MessageSquare },
 ];
 
 interface Props { onClose?: () => void }

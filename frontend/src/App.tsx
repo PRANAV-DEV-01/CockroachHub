@@ -44,6 +44,9 @@ const ProtestMap = lazy(() => import("./pages/Map"));
 const GroupCheckin = lazy(() => import("./pages/GroupCheckin"));
 const Prepare = lazy(() => import("./pages/Prepare"));
 const BusRoutes = lazy(() => import("./pages/BusRoutes"));
+const NewsFeed = lazy(() => import("./pages/NewsFeed"));
+const ContactAdmin = lazy(() => import("./pages/ContactAdmin"));
+const OfflineMap = lazy(() => import("./pages/OfflineMap"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const AdminLogin = lazy(() => import("./pages/admin/Login"));
 const ChangePassword = lazy(() => import("./pages/admin/ChangePassword"));
@@ -61,6 +64,8 @@ const AdminIPBlacklist = lazy(() => import("./pages/admin/IPBlacklist"));
 const AdminLoginAttempts = lazy(() => import("./pages/admin/LoginAttempts"));
 const AdminMetroDisruptions = lazy(() => import("./pages/admin/MetroDisruptions"));
 const AdminMetroStations = lazy(() => import("./pages/admin/MetroStations"));
+const AdminNews = lazy(() => import("./pages/admin/AdminNews"));
+const AdminMessages = lazy(() => import("./pages/admin/AdminMessages"));
 
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-[40vh] bg-ph-light dark:bg-ph-black">
@@ -237,6 +242,9 @@ export default function App() {
             <Route path="/group" element={<GroupCheckin />} />
             <Route path="/prepare" element={<Prepare />} />
             <Route path="/bus" element={<BusRoutes />} />
+            <Route path="/news" element={<NewsFeed />} />
+            <Route path="/contact-admin" element={<ContactAdmin />} />
+            <Route path="/offline-map" element={<OfflineMap />} />
           </Route>
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/change-password" element={<ChangePassword />} />
@@ -256,6 +264,8 @@ export default function App() {
               <Route path="/admin/login-attempts" element={<AdminLoginAttempts />} />
               <Route path="/admin/metro" element={<AdminMetroDisruptions />} />
               <Route path="/admin/metro-stations" element={<AdminMetroStations />} />
+              <Route path="/admin/news" element={<AdminNews />} />
+              <Route path="/admin/messages" element={<AdminMessages />} />
             </Route>
           </Route>
           <Route path="*" element={<NotFound />} />
