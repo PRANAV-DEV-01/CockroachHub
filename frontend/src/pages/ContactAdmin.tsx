@@ -24,22 +24,27 @@ export default function ContactAdmin() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
 
   const submit = () => {
     if (!title.trim() || !body.trim()) return;
-    const msg: AdminMessage = {
-      id: crypto.randomUUID?.() || Date.now().toString(36),
-      title: title.trim(),
-      body: body.trim(),
-      status: "sent",
-      created_at: new Date().toISOString(),
-    };
-    const updated = [msg, ...messages];
-    saveMessages(updated);
-    setMessages(updated);
-    setTitle(""); setBody("");
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
+    setSending(true);
+    setTimeout(() => {
+      const msg: AdminMessage = {
+        id: crypto.randomUUID?.() || Date.now().toString(36),
+        title: title.trim(),
+        body: body.trim(),
+        status: "sent",
+        created_at: new Date().toISOString(),
+      };
+      const updated = [msg, ...messages];
+      saveMessages(updated);
+      setMessages(updated);
+      setTitle(""); setBody("");
+      setSent(true);
+      setSending(false);
+      setTimeout(() => setSent(false), 3000);
+    }, 100);
   };
 
   return (
@@ -58,9 +63,9 @@ export default function ContactAdmin() {
             placeholder={t("contact.titlePlaceholder")} className="ph-input mb-3" />
           <textarea value={body} onChange={(e) => setBody(e.target.value)}
             placeholder={t("contact.bodyPlaceholder")} className="ph-input mb-3 min-h-[120px]" />
-          <button onClick={submit} disabled={!title.trim() || !body.trim()}
+          <button onClick={submit} disabled={!title.trim() || !body.trim() || sending}
             className="ph-btn-primary ph-btn-sm flex items-center gap-1.5 disabled:opacity-40">
-            <Send className="h-4 w-4" />{sent ? t("contact.sent") : t("contact.sendMessage")}
+            <Send className="h-4 w-4" />{sending ? t("contact.sending") : sent ? t("contact.sent") : t("contact.sendMessage")}
           </button>
           {sent && (
             <p className="mt-2 text-sm text-green-600 flex items-center gap-1">

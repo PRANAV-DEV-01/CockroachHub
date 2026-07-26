@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Newspaper, Send, Image as ImageIcon, X, Check, AlertTriangle } from "lucide-react";
+import { Newspaper, Send, Image as ImageIcon, X, AlertTriangle } from "lucide-react";
 import { SEO } from "../components/SEO";
 import { useLocale } from "../hooks/useLocale";
 
@@ -28,6 +27,8 @@ export default function NewsFeed() {
   const [body, setBody] = useState("");
   const [mediaPreview, setMediaPreview] = useState<string[]>([]);
   const [showForm, setShowForm] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleMedia = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
@@ -43,19 +44,25 @@ export default function NewsFeed() {
 
   const submit = () => {
     if (!title.trim() || !body.trim()) return;
-    const post: NewsPost = {
-      id: crypto.randomUUID?.() || Date.now().toString(36),
-      title: title.trim(),
-      body: body.trim(),
-      media: mediaPreview,
-      author: "Anonymous",
-      status: "pending",
-      created_at: new Date().toISOString(),
-    };
-    const updated = [post, ...posts];
-    savePosts(updated);
-    setPosts(updated);
-    setTitle(""); setBody(""); setMediaPreview([]); setShowForm(false);
+    setSending(true);
+    setTimeout(() => {
+      const post: NewsPost = {
+        id: crypto.randomUUID?.() || Date.now().toString(36),
+        title: title.trim(),
+        body: body.trim(),
+        media: mediaPreview,
+        author: "Anonymous",
+        status: "pending",
+        created_at: new Date().toISOString(),
+      };
+      const updated = [post, ...posts];
+      savePosts(updated);
+      setPosts(updated);
+      setTitle(""); setBody(""); setMediaPreview([]); setShowForm(false);
+      setSending(false);
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 3000);
+    }, 100);
   };
 
   const approved = posts.filter((p) => p.status === "approved");
@@ -103,7 +110,10 @@ export default function NewsFeed() {
                 <ImageIcon className="h-4 w-4" />{t("news.addMedia")}
                 <input type="file" accept="image/*,video/*" multiple onChange={handleMedia} className="hidden" />
               </label>
-              <button onClick={submit} className="ph-btn-primary ph-btn-sm">{t("news.post")}</button>
+              <button onClick={submit} disabled={sending || !title.trim() || !body.trim()}
+                className="ph-btn-primary ph-btn-sm disabled:opacity-40">
+                {sending ? "Posting..." : submitted ? "Posted!" : t("news.post")}
+              </button>
             </div>
           </div>
         )}
@@ -139,7 +149,7 @@ export default function NewsFeed() {
         <div className="mt-6 p-4 bg-ph-orange/10 border border-ph-orange/20">
           <p className="text-xs text-ph-text-muted flex items-center gap-1.5">
             <AlertTriangle className="h-3.5 w-3.5 text-ph-orange shrink-0" />
-            {t("news.moderation")}
+            Posts are reviewed before appearing publicly.
           </p>
         </div>
       </div>
