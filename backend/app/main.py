@@ -5,7 +5,6 @@ from datetime import datetime, timezone
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import Response
 from sqlalchemy import select, text
@@ -14,7 +13,6 @@ from app.database import async_session
 from app.config import settings
 from app.routers import admin, auth, public
 from app.seed import seed_database, seed_metro_stations, seed_safe_zones
-from app.docx_sync import sync_from_docx
 
 
 @asynccontextmanager
@@ -24,9 +22,13 @@ async def lifespan(app: FastAPI):
         await seed_database()
         await seed_metro_stations()
         await seed_safe_zones()
+    except Exception as e:
+        print(f"Seed error (DB may not be ready yet): {e}", file=sys.stderr)
+    try:
+        from app.docx_sync import sync_from_docx
         await sync_from_docx()
     except Exception as e:
-        print(f"Seed/sync error (DB may not be ready yet): {e}", file=sys.stderr)
+        print(f"Docx sync skipped: {e}", file=sys.stderr)
     yield
 
 
@@ -41,7 +43,11 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
         response.headers["X-XSS-Protection"] = "1; mode=block"
         response.headers["Referrer-Policy"] = "no-referrer"
         response.headers["Permissions-Policy"] = "geolocation=(self), microphone=(), camera=()"
-        response.headers["Content-Security-Policy"] = f"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' {' '.join(settings.allowed_origins_list)}; img-src 'self' data:; font-src 'self'"
+        connect_src = " ".join(["'self'"] + settings.allowed_origins_list)
+        response.headers["Content-Security-Policy"] = (
+            f"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; "
+            f"connect-src {connect_src}; img-src 'self' data:; font-src 'self'"
+        )
         return response
 
 
