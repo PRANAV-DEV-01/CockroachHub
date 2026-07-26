@@ -52,10 +52,9 @@ function clearUnlock() {
 
 export function StealthProvider({ children }: { children: ReactNode }) {
   const [unlocked, setUnlocked] = useState(() => getStoredUnlock());
-
-  const hasPin = !!localStorage.getItem(PIN_KEY);
+  const [hasPin] = useState(() => !!localStorage.getItem(PIN_KEY));
   const [eraseMinutes, setEraseMinutesState] = useState(
-    parseInt(localStorage.getItem(ERASE_KEY) || "30")
+    () => parseInt(localStorage.getItem(ERASE_KEY) || "30")
   );
 
   const setPin = useCallback((pin: string) => {

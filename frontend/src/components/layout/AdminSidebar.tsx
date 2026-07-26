@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   LayoutDashboard, Inbox, Radio, ShieldCheck, Phone, Scale, Users, LogOut, ChevronLeft, Megaphone,
@@ -27,7 +28,7 @@ const links: { to: string; key: string; icon: any }[] = [
 
 interface Props { onClose?: () => void }
 
-export function AdminSidebar({ onClose }: Props) {
+export const AdminSidebar = memo(function AdminSidebar({ onClose }: Props) {
   const loc = useLocation();
   const nav = useNavigate();
   const logout = useAuthStore((s) => s.logout);
@@ -67,4 +68,4 @@ export function AdminSidebar({ onClose }: Props) {
       </div>
     </aside>
   );
-}
+});

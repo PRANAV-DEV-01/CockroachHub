@@ -165,14 +165,9 @@ function PublicLayout() {
 function ProtectedRoute() {
   const { token, hydrate } = useAuthStore();
   const loc = useLocation();
-  const [hydrated, setHydrated] = useState(false);
 
-  useEffect(() => {
-    hydrate();
-    setHydrated(true);
-  }, []);
+  useEffect(() => { hydrate(); }, []);
 
-  if (!hydrated) return <PageLoader />;
   if (token === null) return <Navigate to="/admin/login" state={{ from: loc }} replace />;
   return <Outlet />;
 }

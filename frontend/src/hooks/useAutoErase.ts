@@ -11,11 +11,9 @@ export function useAutoErase(enabled: boolean, timeoutMinutes: number = 30, t?: 
 
   const erase = useCallback(() => {
     STORAGE_KEYS.forEach((key) => localStorage.removeItem(key));
-    // Clear IndexedDB caches
     if ("caches" in window) {
       caches.keys().then((names) => names.forEach((n) => caches.delete(n)));
     }
-    // Clear service worker cache
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.getRegistrations().then((regs) =>
         regs.forEach((r) => r.unregister())
@@ -32,7 +30,6 @@ export function useAutoErase(enabled: boolean, timeoutMinutes: number = 30, t?: 
 
     if (!enabled) return;
 
-    // Show warning 30s before erase
     warningRef.current = setTimeout(() => {
       if (!warnedRef.current) {
         warnedRef.current = true;
@@ -53,13 +50,27 @@ export function useAutoErase(enabled: boolean, timeoutMinutes: number = 30, t?: 
       return;
     }
 
-    const events = ["mousedown", "touchstart", "keydown", "scroll", "click"];
-    const handler = () => resetTimer();
+    let debounceTimer: ReturnType<typeof setTimeout> | undefined;
+    const handler = () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(resetTimer, 500);
+    };
 
     resetTimer();
-    events.forEach((e) => window.addEventListener(e, handler));
+
+    window.addEventListener("mousemove", handler, { passive: true });
+    window.addEventListener("keydown", handler, { passive: true });
+    window.addEventListener("touchstart", handler, { passive: true });
+    window.addEventListener("scroll", handler, { passive: true });
+    window.addEventListener("visibilitychange", handler, { passive: true });
+
     return () => {
-      events.forEach((e) => window.removeEventListener(e, handler));
+      clearTimeout(debounceTimer);
+      window.removeEventListener("mousemove", handler);
+      window.removeEventListener("keydown", handler);
+      window.removeEventListener("touchstart", handler);
+      window.removeEventListener("scroll", handler);
+      window.removeEventListener("visibilitychange", handler);
       clearTimeout(timerRef.current);
       clearTimeout(warningRef.current);
     };

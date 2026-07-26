@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { setCachedToken } from "../lib/api";
 import type { Admin } from "../types";
 
 interface AuthState {
@@ -15,11 +16,13 @@ export const useAuthStore = create<AuthState>((set) => ({
 
   setAuth: (token, admin) => {
     localStorage.setItem("auth", JSON.stringify({ token, admin }));
+    setCachedToken(token);
     set({ token, admin });
   },
 
   logout: () => {
     localStorage.removeItem("auth");
+    setCachedToken(null);
     set({ token: null, admin: null });
   },
 
@@ -29,6 +32,7 @@ export const useAuthStore = create<AuthState>((set) => ({
       try {
         const { token, admin } = JSON.parse(stored);
         if (token && admin) {
+          setCachedToken(token);
           set({ token, admin });
         }
       } catch {

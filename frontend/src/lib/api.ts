@@ -6,17 +6,29 @@ const api = axios.create({
   headers: { "Content-Type": "application/json" },
 });
 
-api.interceptors.request.use((config) => {
-  const stored = localStorage.getItem("auth");
-  if (stored) {
-    try {
+let cachedToken: string | null = null;
+
+export function setCachedToken(token: string | null) {
+  cachedToken = token;
+}
+
+function getStoredToken(): string | null {
+  if (cachedToken) return cachedToken;
+  try {
+    const stored = localStorage.getItem("auth");
+    if (stored) {
       const { token } = JSON.parse(stored);
-      if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
-      }
-    } catch {
-      /* ignore */
+      cachedToken = token || null;
+      return cachedToken;
     }
+  } catch { /* ignore */ }
+  return null;
+}
+
+api.interceptors.request.use((config) => {
+  const token = getStoredToken();
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
 });
@@ -25,6 +37,7 @@ api.interceptors.response.use(
   (res) => res,
   (err) => {
     if (err.response?.status === 401) {
+      cachedToken = null;
       localStorage.removeItem("auth");
       window.location.href = "/admin/login";
     }
