@@ -94,4 +94,15 @@ export default defineConfig({
   server: {
     proxy: { "/api": "http://localhost:8228" },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom", "react-router-dom"],
+          ui: ["lucide-react", "react-hot-toast"],
+          state: ["zustand", "axios"],
+        },
+      },
+    },
+  },
 });

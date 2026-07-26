@@ -22,20 +22,24 @@ export default function AdminLogin() {
     setBusy(true);
     try {
       let data;
-      try {
-        const ctrl = new AbortController();
-        const timer = setTimeout(() => ctrl.abort(), 3000);
-        const res = await fetch(`${API_BASE}/auth/login`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, password: pw }),
-          signal: ctrl.signal,
-        });
-        clearTimeout(timer);
-        if (!res.ok) throw new Error("backend down");
-        data = await res.json();
-      } catch {
+      if (!API_BASE || API_BASE === "/api") {
         data = await mockLogin(email, pw);
+      } else {
+        try {
+          const ctrl = new AbortController();
+          const timer = setTimeout(() => ctrl.abort(), 1500);
+          const res = await fetch(`${API_BASE}/auth/login`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password: pw }),
+            signal: ctrl.signal,
+          });
+          clearTimeout(timer);
+          if (!res.ok) throw new Error("backend down");
+          data = await res.json();
+        } catch {
+          data = await mockLogin(email, pw);
+        }
       }
       setAuth(data.access_token, data.admin);
       toast.success(t("admin.welcome") + data.admin.name);

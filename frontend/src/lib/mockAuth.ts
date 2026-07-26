@@ -22,7 +22,6 @@ function safeToken(): string {
 const MOCK_TOKEN = safeToken();
 
 export async function mockLogin(email: string, password: string) {
-  await new Promise((r) => setTimeout(r, 300));
   if (email === MOCK_ADMIN.email && password === MOCK_PW) {
     return { access_token: MOCK_TOKEN, admin: MOCK_ADMIN };
   }
